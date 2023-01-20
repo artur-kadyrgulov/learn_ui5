@@ -1,6 +1,7 @@
 sap.ui.define([
-    "sap/ui/core/mvc/Controller"
- ], function (Controller) {
+    "sap/ui/core/mvc/Controller",
+    "sap/m/MessageToast"
+ ], function (Controller, MessageToast) {
     "use strict";
 
     // Controller names are capitalized, for example App.controller.js
@@ -14,9 +15,8 @@ sap.ui.define([
     // sap.ui.demo.walkthrough.controller.App specified in App.view.xml like controller for some logic
 
     return Controller.extend("sap.ui.demo.walkthrough.controller.App", {
-       onShowHello : function () {
-          // show a native JavaScript alert
-          alert("Hello World");
+        onShowHello : function () {
+            MessageToast.show("Hello World")
        }
     });
  });
